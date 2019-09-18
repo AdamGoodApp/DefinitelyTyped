@@ -2781,6 +2781,13 @@ declare namespace Cesium {
         static tileXYToQuadKey(x: number, y: number, level: number): string;
         static quadKeyToTileXY(quadkey: string): {x: number, y: number, level: number};
     }
+    
+    class MapboxImageryProvider extends ImageryProvider {
+        readonly url: string;
+        readonly mapId: string;
+        readonly accessToken: string;
+        readonly format: string;
+    }
 
     // tslint:disable-next-line no-unnecessary-class
     class EasingFunction {
@@ -3322,6 +3329,13 @@ declare namespace Cesium {
         get(index: number): Label;
         isDestroyed(): boolean;
         destroy(): void;
+    }
+        
+    class MapboxImageryProvider extends ImageryProvider {
+        readonly url: string;
+        readonly mapId: string;
+        readonly accessToken: string;
+        readonly format: string;
     }
 
     class Material {
